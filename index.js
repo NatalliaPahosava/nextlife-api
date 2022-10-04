@@ -3,8 +3,8 @@ import cors from 'cors'
 import { MongoClient } from 'mongodb'
 import 'dotenv/config'
 
-const URI=process.env.MONGO_URI
-const PORT=process.env.PORT
+const URI='mongodb+srv://NatalliaPahosava:sladk11mo1@nataliapogosova.1b8tti3.mongodb.net/test'
+const PORT=4040
 const client= new MongoClient(URI)
 const database=client.db('nextlife-api')
 const items=database.collection('items')
