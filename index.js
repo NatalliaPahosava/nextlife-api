@@ -31,7 +31,7 @@ app.delete('/', async(req,res)=>{
 })
 //---------PUT---------//
 app.put('/',async (req,res)=>{
-    items.findOneAndUpdate(req.query,{ $set:req.body })
+   await items.findOneAndUpdate(req.query,{ $set:req.body })
     res.json('Item was updated')
 })
 
