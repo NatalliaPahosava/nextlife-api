@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { MongoClient } from 'mongodb'
+import { MongoClient, ObjectId } from 'mongodb'
 import 'dotenv/config'
 
 const URI='mongodb+srv://NatalliaPahosava:sladk11mo1@nataliapogosova.1b8tti3.mongodb.net/test'
@@ -26,7 +26,8 @@ res.send('Item was added')
 })
 //DELETE
 app.delete('/', async(req,res)=>{
-  await items.findOneAndDelete(req.query)
+  let id=new ObjectId(req.query._id)
+  await items.findOneAndDelete({_id:id})
   res.json('Item was deleted')
 })
 //---------PUT---------//
