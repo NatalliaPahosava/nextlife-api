@@ -27,7 +27,7 @@ res.send('Item was added')
 //DELETE
 app.delete('/', async(req,res)=>{
   let id=new ObjectId(req.query._id)
-  await items.findOneAndDelete({_id:id})
+  await items.findOneAndDelete({_id: id})
   res.json('Item was deleted')
 })
 //---------PUT---------//
