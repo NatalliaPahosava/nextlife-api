@@ -31,7 +31,7 @@ app.listen(PORT,()=>console.log('API is running on PORT 4040'))
 
 app.get('/',async(req,res)=>{
   const userToken = req.headers.authentication
-  jwt.verify(userToken, process.env.SECRET_KEY, async (err, decoded) => {
+  jwt.verify(userToken, 'secret-key', async (err, decoded) => {
  
   //if token is ok then send list of users to req
     if (decoded) {
@@ -48,7 +48,8 @@ app.post('/',async(req,res)=>{
 await items.insertOne(req.body)  
 res.send('Item was added')
 })
-//---------DELETE(Delete)-----//
+//---------DELETE(Delete)-----// start
+
 app.delete('/', async(req,res)=>{
   let id=new ObjectId(req.query._id)
   await items.findOneAndDelete({_id: id})
@@ -84,7 +85,7 @@ app.post('/login', async (req, res) => {
     const allowedUser = await bcrypt.compare(req.body.password, user.password)
     console.log(allowedUser)
     //3.create a jwt token for user-Authorization
-    const accessToken = jwt.sign(user, process.env.SECRET_KEY)
+    const accessToken = jwt.sign(user,'secret-key')
     console.log(accessToken)
     //4. Send somth back to requestor aka frontend
     res.status(200).send({ accessToken: accessToken })
