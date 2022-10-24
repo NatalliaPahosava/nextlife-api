@@ -6,6 +6,7 @@ Fullstack App
 + Javascript
 + JSX
 + React JS(AWS S3)
++ Uploading Images (AWS S3)
 + AWS EC2(API)
 + MongoDB
 
