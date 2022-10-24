@@ -15,8 +15,8 @@ Fullstack App
 See the [demo link](http://nextlife-np.s3-website-us-east-1.amazonaws.com/) on AWS EC2 Instance. 
 [Front End Link](https://github.com/NatalliaPahosava/nextlife-frontend)
 
-![Demo screen shot](https://github.com/NatalliaPahosava/nextlife-frontend/blob/main/src/assets/img/demo1.png)
+![Demo screen shot](https://github.com/NatalliaPahosava/nextlife-frontend/blob/main/src/assets/img/demo-1.png)
 
-![Demo screen shot](https://github.com/NatalliaPahosava/nextlife-frontend/blob/main/src/assets/img/demo2.png)
+![Demo screen shot](https://github.com/NatalliaPahosava/nextlife-frontend/blob/main/src/assets/img/demo-2.png)
 
-![Demo screen shot](https://github.com/NatalliaPahosava/nextlife-frontend/blob/main/src/assets/img/demo3.png)
+![Demo screen shot](https://github.com/NatalliaPahosava/nextlife-frontend/blob/main/src/assets/img/demo-3.png)
