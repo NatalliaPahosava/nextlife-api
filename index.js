@@ -7,7 +7,6 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
 ///---Connections---///
-
 const URI=process.env.MONGO_URI
 const PORT = 4040
 const client = new MongoClient(URI)
@@ -24,11 +23,7 @@ app.use(cors())
 app.use(express.json())
 app.listen(PORT, () => console.log('API is running on PORT 4040'))
 
-//--------Get(Read)---------//
-// app.get('/',async(req,res)=>{
-// const allItems=await items.find().toArray()
-// res.send(allItems)})
-
+//--------Get(Read)---------/
 app.get('/', async (req, res) => {
   const userToken = req.headers.authentication
   jwt.verify(userToken, 'secret-key', async (err, decoded) => {
